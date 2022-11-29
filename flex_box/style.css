@@ -9,16 +9,17 @@
     margin: auto;
     display: flex;
     /* flex-direction: row-reverse; */
-    /* align-items: center; */
-    align-content: space-around;
+    align-items: flex-start;
+    /* align-content: space-around;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
 }
 .container>div{
     border: 1px solid green;
     margin: 5px;
     padding: 5px;
-    width: 500px;
+    flex-grow: 1;
+    /* width: 500px; */
 }
 
 @media only screen and (max-width: 500px) {
@@ -27,3 +28,17 @@
         flex-direction: column;
     }
 }
+
+.item-1{
+    flex-grow: 2;
+}
+
+/* .dummy{
+    order: ;
+    flex-grow: ;
+    flex-basis: ;
+    flex-shrink: ;
+    align-self: ; fixed item horizontli
+} */
+
+/* video link:- https://youtu.be/5Ex2F7ZEAjk */
