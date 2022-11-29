@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    width: 1200px;
+    height: 500px;
+    border: 1px solid red;
+    margin: auto;
+    display: flex;
+    /* flex-direction: row-reverse; */
+    /* align-items: center; */
+    align-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.container>div{
+    border: 1px solid green;
+    margin: 5px;
+    padding: 5px;
+    width: 500px;
+}
+
+@media only screen and (max-width: 500px) {
+    .container{
+        width: 100%;
+        flex-direction: column;
+    }
+}
