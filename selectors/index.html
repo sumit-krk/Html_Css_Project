@@ -14,6 +14,14 @@
         ul>li{
             color: rgb(17, 212, 50);
         }
+        /* adjecent selectors (just adjecent) */
+        div+p{
+            color: blue;
+        }
+        /* adjecent selectors (any level adjecent adjecent) */
+        h1~p{
+            color: rgb(207, 33, 223);
+        }
     </style>
 </head>
 <body>
@@ -32,5 +40,12 @@
         <li>phone</li>
         <li>bus</li>
     </ul>
+    <div>main Div</div>
+    <p>Para-1</p>
+    <p>Para-2</p>
+    <h1>heading top</h1>
+    <p>Para-3</p>
+    <p>Para-4</p>
+
 </body>
 </html>
