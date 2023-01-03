@@ -5,10 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* child and parent selectors (at ny level) */
+        ol li{
+            color: red;
+        }
+        /* child and parent selectors (only at top level) */
+        ul>li{
+            color: rgb(17, 212, 50);
+        }
+    </style>
 </head>
 <body>
     <ol>
-        <li>Hi</li>
+        <li>
+            <ol>
+                <li>So</li>
+                <li>What</li>
+            </ol>
+        </li>
         <li>Hello</li>
         <li>By</li>
     </ol>
