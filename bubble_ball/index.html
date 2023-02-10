@@ -6,31 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .div_top{
+        #target{
             width: 20px;
             height: 20px;
             background-color: blue;
             position: absolute;
-            /* margin-right: 100px; */
             left: 100px;
+            top: 100px;
         }
     </style>
 </head>
-<script>
-    function getOffset( el ) {
-    var _x = 0;
-    var _y = 0;
-    while( el && !isNaN( el.offsetLeft ) && !isNaN( el.offsetTop ) ) {
-        _x += el.offsetLeft - el.scrollLeft;
-        _y += el.offsetTop - el.scrollTop;
-        el = el.offsetParent;
-    }
-    return { top: _y, left: _x };
-}
-var x = getOffset( document.getElementsByClassName('div_top') ).left;
-console.log("x",x)
-</script>
 <body>
-    <div class="div_top"></div>
+	<div id="target">
+		<p>Click the button </p>
+	
+	
+		<button onclick="getPoint()">
+			Click
+		</button>
+	
+		<p id="output"></p>
+	
+	</div>
+	
+	<script>
+		function getPoint() {
+			var target = document
+				.getElementById("target");
+		
+			var output = document
+				.getElementById("output");
+		
+			output.innerHTML = "offsetLeft: "
+					+ target.offsetLeft;
+		}
+	</script>
 </body>
+
 </html>
