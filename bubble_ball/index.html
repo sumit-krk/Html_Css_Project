@@ -12,34 +12,28 @@
             background-color: blue;
             position: absolute;
             left: 100px;
-            top: 100px;
+            /* top: 100px; */
         }
     </style>
 </head>
 <body>
 	<div id="target">
-		<p>Click the button </p>
-	
-	
-		<button onclick="getPoint()">
-			Click
-		</button>
-	
-		<p id="output"></p>
-	
 	</div>
+    <button onClick="translateFunction()"> Click Me  </button>
 	
 	<script>
 		function getPoint() {
 			var target = document
 				.getElementById("target");
-		
-			var output = document
-				.getElementById("output");
-		
-			output.innerHTML = "offsetLeft: "
-					+ target.offsetLeft;
+                console.log(target.offsetLeft)
 		}
+        function translateFunction() {
+            document.getElementById("target").style.transform="translateX(-100px)";
+            document.getElementById("target").style.transition=" all 2s" 
+            setTimeout(()=>{
+                getPoint()
+            },2000)
+        }
 	</script>
 </body>
 
