@@ -4,37 +4,42 @@
 }
 .container{
     width: 1200px;
-    height: 500px;
+    /* height: 500px; */
     border: 1px solid red;
     margin: auto;
     display: flex;
     /* flex-direction: row-reverse; */
-    align-items: flex-start;
+    /* align-items: flex-start; align karne par jitna row hota h wo utna part me divide ho jata h */
     /* align-content: space-around;
     justify-content: space-between;
     flex-wrap: wrap; */
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 500px;
+    align-content: space-between;
 }
 .container>div{
     border: 1px solid green;
     margin: 5px;
     padding: 5px;
-    flex-grow: 1;
-    /* width: 500px; */
+    /* flex-grow: 1; */
+    width: 700px;
+    background-color: yellow;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) and (min-width: 400px) {
     .container{
         width: 100%;
         flex-direction: column;
     }
 }
 
-.item-1{
+/* .item-1{
     flex-grow: 2;
-}
+} */
 
 /* .dummy{
-    order: ;
+    order: ; it's used in child and order sabko dena h
     flex-grow: ;
     flex-basis: ;
     flex-shrink: ;
